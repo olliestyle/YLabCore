@@ -24,6 +24,14 @@ public class TwoElementsSumTest {
     }
 
     @Test
+    public void whenSumFound3() {
+        Integer[] input = new Integer[]{3, 7, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+        Integer[] expected = new Integer[]{3, 7};
+        Integer[] actual = new TwoElementsSum().findElements(input, 10);
+        assertThat(actual, is(expected));
+    }
+
+    @Test
     public void whenNoElements() {
         Integer[] input = new Integer[]{};
         Integer[] expected = new Integer[]{null, null};
