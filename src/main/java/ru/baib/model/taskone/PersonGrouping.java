@@ -2,10 +2,7 @@ package ru.baib.model.taskone;
 
 import ru.baib.model.Person;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class PersonGrouping {
@@ -40,6 +37,7 @@ public class PersonGrouping {
         System.out.println();
 
         Map<String, Long> result = Arrays.stream(RAW_DATA)
+                .filter(Objects::nonNull)
                 .distinct()
                 .sorted(Comparator
                         .comparing(Person::getName)
